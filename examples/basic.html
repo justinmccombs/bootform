@@ -5,14 +5,24 @@
     <title>BootForm Example</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
 </head>
 <body>
 
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-12">
-            <form id="bootform" class="form form-horizontal">
+        <div class="col-sm-12 col-lg-8 col-lg-offset-2">
+
+            <h3>BootForm Demo</h3>
+
+            <form class="form form-horizontal">
+
+                <div id="bootform"></div>
+
+
+                    <button type="button" class="btn btn-info pull-right">Submit</button>
+
 
             </form>
         </div>
@@ -22,36 +32,37 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <!-- Latest compiled and minified JS -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="../dist/bootform-min.js"></script>
+<script src="../src/bootform.js"></script>
 
 <script>
     (function($) {
         var $form = $("#bootform");
 
         bootform.text({
-            field: 'test',
-            label: 'Test',
-            class: 'date date-picker',
-            placeholder: 'Test Placeholder'
+            field: 'text',
+            label: 'Text Field',
+            class: 'date',
+            placeholder: 'Text Placeholder'
         }).appendTo($form);
 
         bootform.textarea({
-            field: 'test',
-            label: 'Test',
-            class: 'date date-picker',
-            placeholder: 'Test Placeholder'
+            field: 'textarea',
+            label: 'Text Area',
+            placeholder: 'This is a textarea.'
         }).appendTo($form);
 
         bootform.select({
-            field: 'test',
-            label: 'Test',
+            field: 'select',
+            label: 'Select',
             class: 'date date-picker',
-            values:[
-                {value: 0, text: 'No'},
-                {value: 1, text: 'Yes'},
-                {value: "Test", text: 'Test'},
+            options:[
+                {value: 0, text: 'This'},
+                {value: 1, text: 'Is'},
+                {value: 2, text: 'A'},
+                {value: 3, text: 'Select Box'},
+                {value: 4, text: 'Demo'},
             ],
-            selectedValue: "Test"
+            selectedValue: 3
         }).appendTo($form);
 
 

@@ -129,8 +129,8 @@
     exports.select = function(options) {
         options = sanitize(options);
 
-        if ( ! options.values )
-            throw new Error("Must include an object of values.");
+        if ( ! options.options )
+            throw new Error("Must include an object of select options.");
 
         var $group = getGroup(options);
 
@@ -139,9 +139,9 @@
         if (options.class)
             $input.addClass(options.class);
 
-        for (var i in options.values) {
+        for (var i in options.options) {
             var $option = $(templates.inputs.option);
-            var value = options.values[i];
+            var value = options.options[i];
             var optionValue, optionText;
 
             if (typeof value == 'object') {

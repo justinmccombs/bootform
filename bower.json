@@ -2,7 +2,10 @@
   "name": "bootform",
   "version": "0.0.1",
   "authors": [
-    "JustinMcCombs <jtmccombs@gmail.com>"
+    "Justin McCombs <jtmccombs@gmail.com>"
+  ],
+  "main": [
+    "dist/bootform.js"
   ],
   "description": "Create bootstrap 3 form elements programatically",
   "keywords": [
