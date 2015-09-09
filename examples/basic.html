@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BootForm Example</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form id="bootform" class="form form-horizontal">
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- Latest compiled and minified JS -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="../dist/bootform-min.js"></script>
+
+<script>
+    (function($) {
+        var $form = $("#bootform");
+
+        bootform.text({
+            field: 'test',
+            label: 'Test',
+            class: 'date date-picker',
+            placeholder: 'Test Placeholder'
+        }).appendTo($form);
+
+        bootform.textarea({
+            field: 'test',
+            label: 'Test',
+            class: 'date date-picker',
+            placeholder: 'Test Placeholder'
+        }).appendTo($form);
+
+        bootform.select({
+            field: 'test',
+            label: 'Test',
+            class: 'date date-picker',
+            values:[
+                {value: 0, text: 'No'},
+                {value: 1, text: 'Yes'},
+                {value: "Test", text: 'Test'},
+            ],
+            selectedValue: "Test"
+        }).appendTo($form);
+
+
+    })(jQuery)
+</script>
+
+</body>
+</html>
