@@ -126,6 +126,16 @@
         return $group;
     }
 
+    exports.hidden = function(options) {
+
+        options = sanitize(options);
+
+        if ( ! options.value )
+            throw new Error("Must include a value for a hidden field.");
+
+        return "<input type='hidden' name='"+options.field+"' value='"+options.value+"'>";
+    }
+
     exports.select = function(options) {
         options = sanitize(options);
 
