@@ -128,7 +128,14 @@
 
     exports.hidden = function(options) {
 
-        options = sanitize(options);
+        if (typeof options !== "object") {
+            throw new Error("Please supply an object of options");
+        }
+
+        options = $.extend({}, defaults, options);
+
+        if ( ! options.field )
+            throw new Error("Must include a name");
 
         if ( ! options.value )
             throw new Error("Must include a value for a hidden field.");
