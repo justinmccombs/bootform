@@ -141,8 +141,6 @@
         if ( ! options.field )
             throw new Error("Must include a name");
 
-        if ( ! options.value )
-            throw new Error("Must include a value for a hidden field.");
 
         return $("<input type='hidden' name='"+options.field+"' value='"+options.value+"'>");
     }
