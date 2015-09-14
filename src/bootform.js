@@ -103,6 +103,8 @@
         if (options.class)
             $input.addClass(options.class);
 
+        $input.attr('name', options.field);
+
         $group.find('.form-group-inner').append($input);
 
         return $group;
@@ -120,6 +122,8 @@
 
         if (options.class)
             $input.addClass(options.class);
+
+        $input.attr('name', options.field);
 
         $group.find('.form-group-inner').append($input);
 
