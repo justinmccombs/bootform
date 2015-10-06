@@ -155,6 +155,8 @@
 
         var $input = $(templates.inputs.select);
 
+        $input.attr('name', options.field);
+
         if (options.class)
             $input.addClass(options.class);
 
