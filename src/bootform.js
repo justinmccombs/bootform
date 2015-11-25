@@ -103,6 +103,9 @@
         if (options.class)
             $input.addClass(options.class);
 
+        if (options.id)
+            $input.attr('id', options.id);
+
         $input.attr('name', options.field);
 
         $group.find('.form-group-inner').append($input);
@@ -122,6 +125,9 @@
 
         if (options.class)
             $input.addClass(options.class);
+
+        if (options.id)
+            $input.attr('id', options.id);
 
         $input.attr('name', options.field);
 
@@ -156,6 +162,9 @@
         var $input = $(templates.inputs.select);
 
         $input.attr('name', options.field);
+
+        if (options.id)
+            $input.attr('id', options.id);
 
         if (options.class)
             $input.addClass(options.class);
