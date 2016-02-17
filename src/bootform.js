@@ -129,6 +129,9 @@
         if (options.id)
             $input.attr('id', options.id);
 
+        if (options.value)
+            $input.val(options.value);
+
         $input.attr('name', options.field);
 
         $group.find('.form-group-inner').append($input);
